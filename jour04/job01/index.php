@@ -1,26 +1,21 @@
 <!-- Développez un algorithme qui affiche le nombre d’arguments GET. 
 Tips : Pour tester, créez un formulaire html de type GET avec différents 
 input. -->
-<?php
 
-var_dump($_GET);
+<?php
+// var_dump($_GET);
 
 ?>
-
-
-
 <!doctype html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8">
     <title>Job 01 (Jour 04)</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
-    <form action="#" method="get">
+    <form action="#" method="GET">
         <label for="nom">Nom:</label><br>
         <input type="text" id="nom" name="nom"><br>
         <label for="prenom">Prénom:</label><br>
@@ -32,5 +27,20 @@ var_dump($_GET);
         <input type="submit" value="Envoyer">
     </form>
 </body>
+
+<?php
+
+$i = 0;
+
+foreach($_GET as [$argument]){
+    if($argument != ' '){
+        $i++;
+    }
+}
+
+echo 'Il y a ' . $i . ' arguments GET.'
+
+
+?>
 
 </html>
