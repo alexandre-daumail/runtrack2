@@ -19,18 +19,18 @@ input. -->
 
     <?php
 
-$i = 0;
+    $i = 0;
 
-foreach($_POST as [$argument]){
-    if($argument != ' '){
-        $i++;
+    foreach ($_POST as [$argument]) {
+        if ($argument != ' ') {
+            $i++;
+        }
     }
-}
 
-echo 'Il y a ' . $i . ' arguments POST.'
+    echo 'Il y a ' . $i . ' arguments POST.'
 
 
-?>
+    ?>
 
 </body>
 
