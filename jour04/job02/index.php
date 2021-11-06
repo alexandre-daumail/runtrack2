@@ -7,7 +7,7 @@ input. -->
 
 <head>
     <meta charset="utf-8">
-    <title>Job 02 (Jour 04)</title>
+    <title>Job 02 (Jour 4)</title>
 </head>
 
 <body>
