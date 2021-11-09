@@ -23,6 +23,6 @@ function leetspeak($str){
 }
 
 
-echo leetspeak('aaaaaaa');
+echo leetspeak('ghdht');
 ?>
 
