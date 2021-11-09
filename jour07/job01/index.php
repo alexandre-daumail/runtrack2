@@ -27,9 +27,7 @@ echo $_SESSION["nbvisites"];
 
 <head>
     <meta charset="utf-8">
-    <title>Titre de la page</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Job 01 - Jour 07</title>
 </head>
 
 <body>
