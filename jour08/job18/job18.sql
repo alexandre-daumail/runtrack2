@@ -1,0 +1,1 @@
+SELECT salles.nom, etage.nom, MAX(`capacite`) FROM salles LEFT JOIN etage ON salles.id_etage = etage.id ORDER BY etage.nom;
