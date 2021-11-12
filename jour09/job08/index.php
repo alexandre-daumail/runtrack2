@@ -1,16 +1,10 @@
-<!-- En utilisant php et mysqli, connectez-vous à la base de données “jour08”. A 
-l’aide d’une requête SQL, récupérez l’ensemble des informations de la 
-table etudiants. 
-
-Affichez le résultat de cette requête dans un tableau html. 
-La première ligne de votre tableau html (thead) doit contenir le nom des 
-champs. Les suivantes (tbody) doivent contenir les données présentes 
-dans votre base de données -->
+<!-- Sélectionnez dans une colonne nommée
+“capacite_totale” la somme des capacités des salles.  -->
 
 <?php
 
 $bdd = mysqli_connect("localhost", "root", "", "jour08"); //=> initialiser connexion
-$req = mysqli_query($bdd, "SELECT * FROM etudiants"); //=> exécuter requete
+$req = mysqli_query($bdd, "SELECT SUM(capacite) AS capacite_totale FROM salles"); //=> exécuter requete
 
 $res = mysqli_fetch_all($req, MYSQLI_ASSOC); //=> stocker requête
 
@@ -20,7 +14,7 @@ $res = mysqli_fetch_all($req, MYSQLI_ASSOC); //=> stocker requête
 <html lang="fr">
 
 <head>
-    <title>Job 01 - Jour 09</title>
+    <title>Job 08 - Jour 09</title>
 </head>
 
 <body>

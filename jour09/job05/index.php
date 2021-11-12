@@ -1,16 +1,10 @@
-<!-- En utilisant php et mysqli, connectez-vous à la base de données “jour08”. A 
-l’aide d’une requête SQL, récupérez l’ensemble des informations de la 
-table etudiants. 
-
-Affichez le résultat de cette requête dans un tableau html. 
-La première ligne de votre tableau html (thead) doit contenir le nom des 
-champs. Les suivantes (tbody) doivent contenir les données présentes 
-dans votre base de données -->
+<!-- Récupérez l’ensemble des informations des étudiants 
+qui ont moins de 18 ans.  -->
 
 <?php
 
 $bdd = mysqli_connect("localhost", "root", "", "jour08"); //=> initialiser connexion
-$req = mysqli_query($bdd, "SELECT * FROM etudiants"); //=> exécuter requete
+$req = mysqli_query($bdd, "SELECT * FROM `etudiants` WHERE `naissance` > CURRENT_DATE - INTERVAL '18' YEAR;"); //=> exécuter requete
 
 $res = mysqli_fetch_all($req, MYSQLI_ASSOC); //=> stocker requête
 
@@ -20,7 +14,7 @@ $res = mysqli_fetch_all($req, MYSQLI_ASSOC); //=> stocker requête
 <html lang="fr">
 
 <head>
-    <title>Job 01 - Jour 09</title>
+    <title>Job 5 - Jour 09</title>
 </head>
 
 <body>
