@@ -25,7 +25,7 @@ input. -->
         </form>
     </main>
     <aside>
-        <table>
+        <table border = 1>
             <thead>
                 <tr>
                     <th>Argument</th>
@@ -35,20 +35,12 @@ input. -->
 
             <tbody>
                 <tr>
-                    <td>Nom</td>
-                    <td><?php echo $_GET['nom'] ?></td>
-                </tr>
-                <tr>
-                    <td>Prénom</td>
-                    <td><?php echo $_GET['prenom'] ?></td>
-                </tr>
-                <tr>
-                    <td>Age</td>
-                    <td><?php echo $_GET['age'] ?></td>
-                </tr>
-                <tr>
-                    <td>Adresse</td>
-                    <td><?php echo $_GET['adresse'] ?></td>
+                    <?php
+                        foreach($_GET as $key => $value){
+                            echo '<tr><td>' . $key . '</td>';
+                            echo '<td>' . $value . '</td></tr>';
+                        }
+                        ?>
                 </tr>
             </tbody>
         </table>

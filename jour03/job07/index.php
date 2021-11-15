@@ -6,8 +6,13 @@ troisième etc.. et le dernier par le premier. -->
 <?php
 
 $str = "Certaines choses changent, et d'autres ne changeront jamais.";
-
-for($i = 0; isset($str[$i]) == true; $i++)
-    echo $str[$i++];
+$y=1;
+for($x = 0; isset($str[$x]); $x++){
+    while(isset($str[$x])){
+        
+        echo $str[$y];
+        $y++;
+    }
+}
 
 ?>
