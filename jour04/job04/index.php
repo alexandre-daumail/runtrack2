@@ -27,16 +27,12 @@
 
             <tbody>
                 <tr>
-                    <td>Pseudo</td>
-                    <td><?php echo $_POST['pseudo'] ?></td>
-                </tr>
-                <tr>
-                    <td>Mot de Passe</td>
-                    <td><?php echo $_POST['mdp'] ?></td>
-                </tr>
-                <tr>
-                    <td>Validé</td>
-                    <td><?php if (isset($_POST['valider']) == true) {echo 'Oui';} ?></td>
+                    <?php
+                    foreach ($_POST as $key => $value) {
+                        echo '<tr><td>' . $key . '</td>';
+                        echo '<td>' . $value . '</td></tr>';
+                    }
+                    ?>
                 </tr>
             </tbody>
         </table>
