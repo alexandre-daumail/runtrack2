@@ -8,7 +8,7 @@ paramètre une chaîne de caractères nommée “str” et un caractère nommé
 <?php
 
 
-function occurences($str,$char){
+function occurrences($str,$char){
     $i = 0;                                      //$i est notre compteur. Sa valeur sera affichée à la fin de la fonction à l'aide de return.
     for($y = 0; isset($str[$y]) == true; $y++){ // On parcourt la chaîne de caractères de $str
         if($str[$y] == $char){                    // Si le charactère de $str est égal à celui de $char, on incrémente le compteur $i.
@@ -18,6 +18,6 @@ function occurences($str,$char){
     return $i;
 }
 
-echo occurences('aaaaaaaaaaaaa','a');
+echo occurrences('aaaaaaaaaaaaa','a');
 
 ?>
