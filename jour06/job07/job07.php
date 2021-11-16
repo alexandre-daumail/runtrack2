@@ -9,5 +9,8 @@ Exemple : Si tab contient [“abc”, “ghi”, “def”] le resultat sera “
 <?php
 
 function bubblesort($tab, $croissant){
-
+    if($croissant == true){
+        foreach ($tab as $key)
+        return($key);
+    }
 }
